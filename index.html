@@ -1,29 +1,10 @@
-<!DOCTYPE html>
-  
-<html>
-<head>
-
-
-		  
-</head>
-<body>
-	<link rel="stylesheet" href="./styling.css" />
- <p><h1>Favorite TV Channels</h1></p> 
- <br></br>
- 
-<ol>	
-	<li>CNN</li>
-	<br></br>
-	<li>ABC</li>
-	<br></br>
-	<li>BBC</li>
-	<br></br>
-	<li>CBS</li>
-	<br></br>
-	<li>Newyorktimes</li>
-
-</ol> 
-
-  
-</body>
-</html>
+Popularity: {{popularity}}
+{% for genre in genres %}
+    <li>{{genre}}</li>
+{% endfor %}
+</ul>
+<p>
+    Random song from artist:
+    <div>Song: {{random_song.name}}</div>
+    <div>Preview URL: <a href={{random_song.preview_url}}>{{random_song.preview_url}}</a></div>
+</p>
